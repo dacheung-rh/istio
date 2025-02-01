@@ -132,6 +132,7 @@ def getForwardHeaders(request):
     # We handle other (non x-b3-***) headers manually
     if 'user' in session:
         headers['end-user'] = session['user']
+        headers['HospCode'] = session['user']
 
     # Keep this in sync with the headers in details and reviews.
     incoming_headers = [
